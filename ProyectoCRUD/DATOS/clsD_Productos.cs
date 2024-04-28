@@ -13,6 +13,7 @@ namespace ProyectoCRUD.DATOS
     {
         public DataTable Listado_Productos(string cTexto)
         {
+            #region[Procedimiento almacenado para listar productos]
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
@@ -36,10 +37,13 @@ namespace ProyectoCRUD.DATOS
             {
                 if (SqlCon.State == ConnectionState.Open)SqlCon.Close(); 
             }
+            #endregion
         }
+
         public string Guardar_Producto(int nOpcion,
                                        clsE_Productos objPropiedades)
         {
+            #region [Procedimiento almacenado para guardar un producto]
             string Respuesta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
@@ -67,10 +71,12 @@ namespace ProyectoCRUD.DATOS
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return Respuesta;
+            #endregion
         }
         public string Activo_Producto(int nId_Producto,
                                       bool bEstado_Activo)
         {
+            #region[Procedimiento almacenado para saber si un producto está activo o no]
             string Respuesta = "";
             SqlConnection SqlCon = new SqlConnection();
             try
@@ -94,10 +100,12 @@ namespace ProyectoCRUD.DATOS
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
             return Respuesta;
+            #endregion
         }
 
         public DataTable Listado_Medidas()
         {
+            #region[Procedimiento almacenado para el listado de las medidas]
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
@@ -120,9 +128,12 @@ namespace ProyectoCRUD.DATOS
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
+            #endregion
         }
+
         public DataTable Listado_Categorias()
         {
+            #region[Procedimiento almacenado para el listaod de las categorias]
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
             SqlConnection SqlCon = new SqlConnection();
@@ -145,6 +156,7 @@ namespace ProyectoCRUD.DATOS
             {
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
+            #endregion
         }
     }
 }
