@@ -39,6 +39,7 @@ namespace ProyectoCRUD.DATOS
             }
             #endregion
         }
+
         public string Guardar_Producto(int nOpcion,
                                        clsE_Productos objPropiedades)
         {
@@ -129,6 +130,7 @@ namespace ProyectoCRUD.DATOS
             }
             #endregion
         }
+
         public DataTable Listado_Categorias()
         {
             #region[Procedimiento almacenado para el listaod de las categorias]
