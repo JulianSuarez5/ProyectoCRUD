@@ -19,7 +19,7 @@ namespace ProyectoCRUD.PRESENTACION
         {
             InitializeComponent();
         }
-        #region
+        #region[Mis variables]
         int nEstadoGuarda = 0;
         int vId_Produto = 0;
         #endregion
